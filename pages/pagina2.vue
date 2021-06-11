@@ -5,7 +5,7 @@
     </div>
 
     <div class="container8">
-      <img class="celiaimg" src="../static/img/celia.png" />
+      <img class="celiaimg" src="/img/celia.png" />
  
       <div class="descripcioncelia">
         <div class="nombre">
@@ -113,5 +113,50 @@ export default {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 60px !important;
+  color: #000000;
+  letter-spacing: 1px;
+
+}
+
+.container8 {
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.celiaimg {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 6em;
+  padding: 1em;
+  margin-left: 0.2em ;
+}
+.descripcioncelia {
+  width: 300px;
+  font-size: 0.7em;
+  font-weight: lighter;
+  color: rgb(0, 0, 0);
+  text-align:left;
+ h2{
+   color: rgb(255, 153, 0);
+ }
+  
+}
+
 }
 </style>

@@ -6,15 +6,15 @@
 
     <div class="container9">
       <div class="social">
-        <img class="red" src="../static/img/insta.png" />
+        <img class="red" src="/img/insta.png" />
         <h4>celiaroncero</h4>
       </div>
       <div class="social">
-        <img class="red2" src="../static/img/behance.png" />
+        <img class="red2" src="/img/behance.png" />
         <h4>celiaroncero</h4>
       </div>
-      <div class="social">
-        <img class="red3" src="../static/img/gmail.png" />
+      <div class="social3">
+        <img class="red3" src="/img/gmail.png" />
         <h4>celiaroncerogmail.com</h4>
       </div>
     </div>
@@ -108,5 +108,35 @@ export default {
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .container9 {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.red{
+  width: 140px;
+  height: 140px;
+
+}
+.red2{
+  width: 250px;
+  height: 140px;
+ 
+}
+.social{
+  margin-top: 6em;
+}
+.social3{
+margin-bottom: 15em;
+margin-top: 6em;
+
+}
+
 }
 </style>

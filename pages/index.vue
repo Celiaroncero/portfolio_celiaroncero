@@ -7,7 +7,7 @@
 
     <div class="container2">
       <span id="animate1" style="transform: rotate(360deg) width: 150px; height:100px;border-radius:50%;">
-        <img class="cevlogo" src ="../static/img/cev.png"> 
+      <img class="cevlogo" src ="/img/cev.png">  
       </span>
     </div>
     <div class="container2-1">
@@ -27,17 +27,17 @@
     </div>
     <div class="container2-2">
       <div class="imgcev">
-      <img src="../static/img/444.png">
+      <img src="/img/444.png">
       </div>
     </div>
     <div class="container3">
-      <span id="animate2"><img class="filminlogo" src ="../static/img/filmin.png"></span>
+      <span id="animate2"><img class="filminlogo" src ="/img/filmin.png"></span>
     </div>
     
     <div class="containerpromo">
      
      <video class="videopromo"
-          src="../static/img/promo.mp4"
+          src="/img/promo.mp4"
           controls
           loop
           width="100%"
@@ -66,14 +66,14 @@
     <div class="container5">
      
       <div class="imgfilmin">
-     <img src="../static/img/filmindos.png">
+     <img src="/img/filmindos.png">
      
     
      </div>
     </div>
     <div class="container6">
       
-      <img class="discologo" src="../static/img/sebastian.png">
+      <img class="discologo" src="/img/sebastian.png">
      
     </div>
     <div class="container7">
@@ -89,7 +89,7 @@
     </div>
      <div class="containerdisco">
       
-      <img class="discoimg" src="../static/img/disco.png">
+      <img class="discoimg" src="/img/disco.png">
      
     </div>
   </div>
@@ -103,12 +103,13 @@ export default {
     var scene = new this.$scrollmagic.Scene({ triggerElement: ".container2" })
       // trigger a TweenMax.to tween
       .setTween("#animate1", 0.5, {
-        backgroundColor: "white",
+        backgroundColor: "none",
         scale: 2.5,
         rotate: 360,
       })
       .addTo(controller);
 
+ 
     var scene2 = new this.$scrollmagic.Scene({
       triggerElement: ".container3",
       duration: 300,
@@ -124,6 +125,15 @@ export default {
 </script>
 
 <style lang="scss">
+.title {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 90px !important;
+  color: #000000 ;
+  letter-spacing: 1px;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -215,10 +225,7 @@ export default {
   align-items: center;
   text-align: center;
   background-color: white !important;
-  .videopromo{
-    width: 800px;
-    padding: 2em;
-  }
+  
 }
 .containerpromo {
     margin: 0 auto;
@@ -230,6 +237,10 @@ export default {
   font-size: 80px;
   color:white;
   background-color:  #0F1E27;
+  .videopromo{
+   width: 100%;
+   width: 100%
+  }
 }
 .container6 {
     margin: 0 auto;
@@ -243,16 +254,15 @@ export default {
   background-color: rgb(54, 162, 201);
 }
 .container7 {
+  display: grid;
+  justify-content: center;
     margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   font-size: 1.3em;
   color:rgb(85, 85, 85);
   background-color: rgb(255, 255, 255);
-  width: 800px;
+  
   h2{
     color:rgb(54, 162, 201);
     
@@ -271,18 +281,14 @@ export default {
  
 }
  .textdisco{
+  
   font-weight: lighter;
-  font-size: 30px 
+  font-size: 28px;
+  width: 600px !important;
+ margin-top: 2em;
+  
   }
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 90px;
-  color: #000000;
-  letter-spacing: 1px;
-}
+
 
 .subtitle {
   font-weight: 300;
@@ -347,6 +353,208 @@ export default {
 }
 
 
+@media screen and (max-width: 600px) {
+.title {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 60px !important;
+  color: #000000 ;
+  letter-spacing: 1px;
+}
+.container2 {
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(#39AE6F 0%, #75C9F2 100%,);
+}
+.cevlogo{
+   height: 65px;
+    width: 65px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.container2-1 {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+ 
+  .definicion {
+    width: 800px;
+    font-size: 22px  !important;
+    padding: 1.5em;
+    color: rgb(77, 77, 77);
+    font-weight: lighter;
+    h2{
+      color:#F5BD2D; 
+      padding: 0.5em;
+      margin-top: em;
+    }
+  }
+}
+.container2-2 {
+  margin: 0 auto;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  margin-bottom: 5em;
+}
+.container3 {
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(#07E8BF 0%, #0F1E27 100%) !important;
+  font-size: 80px;
+}
+.filminlogo{
+   height: 60%;
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+    padding: 0.2em;
 
+}
+.containerpromo {
+    margin: 0 auto;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 80px;
+  color:white;
+  background-color:  #0F1E27;
+  .videopromo{
+   width: 100%;
+   width: 100%
+  }
+}
+.container4 {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+
+  .definicionfilmin {
+    width: 800px;
+    font-size: 21px;
+    color: rgb(77, 77, 77);
+    font-weight: lighter;
+    padding: 1.5em;
+    h3{
+       font-size: 40px;
+       color: #07E8BF;
+    }
+    
+    
+  }
+  .titulofilmin{
+      color:#0F1E27;
+      font-size: 30px;
+    }
+}
+.container5 {
+  margin: 0 auto;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white !important;
+  
+}
+.imgfilmin{
+  width: 60rem;
+
+  img{
+    margin-top: 4em;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.container6 {
+    margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 80px;
+  color:white;
+  background-color: rgb(54, 162, 201);
+}
+.discologo{
+ height: 85%;
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+}
+
+
+.container7 {
+   margin-top: 4em ;
+ 
+  min-height: 60vh;
+  text-align: center;
+  font-size: 1em;
+  color:rgb(85, 85, 85);
+  background-color: rgb(255, 255, 255);
+  
+  h2{
+    color:rgb(54, 162, 201);
+    
+    
+  }
+}
+.containerdisco {
+    margin: 0 auto;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 80px;
+  color:white;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2em;
+ 
+}
+.discoimg{
+ height: 80%;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+@media screen and (max-width: 600px) {
+  .textdisco{
+  font-weight: lighter;
+  font-size: 22px;
+  width: 350px !important;
+  padding: 1em;
+  
+  }
+}
 
 </style>

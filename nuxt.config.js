@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'scrollmagic',
+    title: 'Celia Roncero',
     htmlAttrs: {
       lang: 'en'
     },
@@ -36,11 +36,16 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@aceforth/nuxt-optimized-images'
   ],
+  optimizedImages: {
+    optimizeImages: true
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    
   ],
   styleResources: {
     scss: ['./assets/scss/*.scss']
